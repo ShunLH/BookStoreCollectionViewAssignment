@@ -12,6 +12,11 @@
 		EF133F4E2316821E00FE39E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF133F4C2316821E00FE39E9 /* Main.storyboard */; };
 		EF133F502316821E00FE39E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF133F4F2316821E00FE39E9 /* Assets.xcassets */; };
 		EF133F532316821E00FE39E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF133F512316821E00FE39E9 /* LaunchScreen.storyboard */; };
+		EF133F5C2316826B00FE39E9 /* BookItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF133F5A2316826B00FE39E9 /* BookItemCollectionViewCell.swift */; };
+		EF133F5D2316826B00FE39E9 /* BookItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF133F5B2316826B00FE39E9 /* BookItemCollectionViewCell.xib */; };
+		EF133F5F2316828700FE39E9 /* BookVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF133F5E2316828700FE39E9 /* BookVO.swift */; };
+		EF133F682316888E00FE39E9 /* BookStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF133F672316888E00FE39E9 /* BookStoreViewController.swift */; };
+		EF133F6C23168E3100FE39E9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF133F6B23168E3100FE39E9 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		EF133F4F2316821E00FE39E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF133F522316821E00FE39E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF133F542316821E00FE39E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF133F5A2316826B00FE39E9 /* BookItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		EF133F5B2316826B00FE39E9 /* BookItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		EF133F5E2316828700FE39E9 /* BookVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookVO.swift; sourceTree = "<group>"; };
+		EF133F672316888E00FE39E9 /* BookStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreViewController.swift; sourceTree = "<group>"; };
+		EF133F6B23168E3100FE39E9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,83 @@
 		EF133F472316821E00FE39E9 /* BookStore */ = {
 			isa = PBXGroup;
 			children = (
+				EF133F6923168E1800FE39E9 /* utils */,
+				EF133F63231682C600FE39E9 /* cells */,
+				EF133F62231682AE00FE39E9 /* data */,
+				EF133F61231682A100FE39E9 /* viewcontrollers */,
+				EF133F602316829A00FE39E9 /* storyboards */,
 				EF133F482316821E00FE39E9 /* AppDelegate.swift */,
-				EF133F4A2316821E00FE39E9 /* ViewController.swift */,
-				EF133F4C2316821E00FE39E9 /* Main.storyboard */,
 				EF133F4F2316821E00FE39E9 /* Assets.xcassets */,
 				EF133F512316821E00FE39E9 /* LaunchScreen.storyboard */,
 				EF133F542316821E00FE39E9 /* Info.plist */,
 			);
 			path = BookStore;
+			sourceTree = "<group>";
+		};
+		EF133F602316829A00FE39E9 /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EF133F4C2316821E00FE39E9 /* Main.storyboard */,
+			);
+			path = storyboards;
+			sourceTree = "<group>";
+		};
+		EF133F61231682A100FE39E9 /* viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				EF133F4A2316821E00FE39E9 /* ViewController.swift */,
+				EF133F672316888E00FE39E9 /* BookStoreViewController.swift */,
+			);
+			path = viewcontrollers;
+			sourceTree = "<group>";
+		};
+		EF133F62231682AE00FE39E9 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				EF133F64231682D800FE39E9 /* vos */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		EF133F63231682C600FE39E9 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				EF133F662316832000FE39E9 /* swifts */,
+				EF133F652316831800FE39E9 /* xibs */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		EF133F64231682D800FE39E9 /* vos */ = {
+			isa = PBXGroup;
+			children = (
+				EF133F5E2316828700FE39E9 /* BookVO.swift */,
+			);
+			path = vos;
+			sourceTree = "<group>";
+		};
+		EF133F652316831800FE39E9 /* xibs */ = {
+			isa = PBXGroup;
+			children = (
+				EF133F5B2316826B00FE39E9 /* BookItemCollectionViewCell.xib */,
+			);
+			path = xibs;
+			sourceTree = "<group>";
+		};
+		EF133F662316832000FE39E9 /* swifts */ = {
+			isa = PBXGroup;
+			children = (
+				EF133F5A2316826B00FE39E9 /* BookItemCollectionViewCell.swift */,
+			);
+			path = swifts;
+			sourceTree = "<group>";
+		};
+		EF133F6923168E1800FE39E9 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				EF133F6B23168E3100FE39E9 /* Extensions.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF133F5D2316826B00FE39E9 /* BookItemCollectionViewCell.xib in Resources */,
 				EF133F532316821E00FE39E9 /* LaunchScreen.storyboard in Resources */,
 				EF133F502316821E00FE39E9 /* Assets.xcassets in Resources */,
 				EF133F4E2316821E00FE39E9 /* Main.storyboard in Resources */,
@@ -136,7 +216,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF133F4B2316821E00FE39E9 /* ViewController.swift in Sources */,
+				EF133F6C23168E3100FE39E9 /* Extensions.swift in Sources */,
 				EF133F492316821E00FE39E9 /* AppDelegate.swift in Sources */,
+				EF133F5C2316826B00FE39E9 /* BookItemCollectionViewCell.swift in Sources */,
+				EF133F5F2316828700FE39E9 /* BookVO.swift in Sources */,
+				EF133F682316888E00FE39E9 /* BookStoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
